@@ -1,0 +1,99 @@
+<body>
+<head>
+    <!-- Bootstrap CDN -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Main Site's Theme -->
+    <link href="static/css/davids_theme.css" rel="stylesheet" />
+
+    <!-- Font Awesome CDN -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link href="static/css/bootstrap-switch.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <section>
+        <div class="container">
+            <!-- Section Heading -->
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Maze Generator</h2>
+                    <h3 class="section-subheading text-muted">Free, online maze generator.</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light-gray">
+        <div class="container">
+            <h2>Maze Information</h2>
+            <div class="row">
+                 <div class="col-md-1">
+                    <h4>Height</h4>
+                </div>
+                <div class="col-md-3">
+                    <input id="dim_height" class="form-control" value="40" size="2" style="text-align: center" onkeyup="CheckValue(this);" onchange="UpdateDims();" title="How many cells high should the puzzle be?" type="text">                </div>
+                <div class="col-md-1">
+                    <h4>Width</h4>
+                </div>
+                <div class="col-md-3">
+                    <input id="dim_width" class="form-control" value="40" size="2" style="text-align: center" onkeyup="CheckValue(this);" onchange="UpdateDims();" title="How many cells wide should the puzzle be?" type="text">
+                </div>
+                <div class="col-md-1">
+                    <h4>Space</h4>
+                </div>
+                <div class="col-md-3">
+                    <input id="cell_size" class="form-control" value="10" size="2" style="text-align: center" onkeyup="CheckValue(this);" title="How wide should the paths be?" type="text">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <h4>Entrance Location</h4>
+                </div>
+                <div class="col-md-3">
+                    <select class="form-control" id="entrance" onchange="UpdateEntrance(this.value);"><option value="tl">Top-Left Corner</option><option value="tr">Top-Right Corner</option><option value="br">Bottom-Right Corner</option><option value="bl">Bottom-Left Corner</option></select>
+                </div>
+                <div class="col-md-3">
+                    <h4>Wall Entrance</h4>
+                </div>
+                <div class="col-md-3">
+                    <select id="wall_entrance" class="form-control" onclick="UpdateEWall();"><option value="3">Left Wall</option><option value="0">Top Wall</option></select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <h4>Exit Location</h4>
+                </div>
+                <div class="col-md-3">
+                    <select id="exit" class="form-control" onchange="UpdateExit(this.value);"><option value="br">Bottom-Right Corner</option><option value="bl">Bottom-Left Corner</option><option value="tr">Top-Right Corner</option><option value="Tl">Top-Left Corner</option></select>                </div>
+                <div class="col-md-3">
+                    <h4>Wall Exit</h4>
+                </div>
+                <div class="col-md-3">
+                    <select id="wall_exit" class="form-control" onclick="UpdateEWall();"><option value="1">Right Wall</option><option value="3">Bottom Wall</option></select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="container" id="bottom_buttons" style="margin-top: 20px;">
+                    <button class="btn btn-success" onclick="LoadMaze();">Generate!</button>
+                    <span id="links"></span>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+ <!-- JQuery CDN -->
+ <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+
+ <!-- Bootstrap JavaScript -->
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script language="JavaScript" type="text/javascript" src="static/js/maze.js"></script>
+</body>
+</html>
