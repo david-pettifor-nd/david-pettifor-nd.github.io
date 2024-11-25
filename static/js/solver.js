@@ -217,22 +217,22 @@ function keyDown(event)
     {
         case 'w':
         case 'W':
-        case '38': // Up arrow
+        case 'ArrowUp': // Up arrow
             MoveUp();
             break;
         case 's':
         case 'S':
-        case '40': // Down arrow
+        case 'ArrowDown': // Down arrow
             MoveDown();
             break;
         case 'a':
         case 'A':
-        case '37': // Left arrow
+        case 'ArrowLeft': // Left arrow
             MoveLeft();
             break;
         case 'd':
         case 'D':
-        case '39': // Right arrow
+        case 'ArrowRight': // Right arrow
             MoveRight();
             break;
     };
