@@ -185,6 +185,7 @@ Start();
 // Function called when the body loads
 function Start()
 {
+    document.addEventListener('keydown', keyDown);
     SetUserRepresent();
     UpdatePosition();
 }
@@ -199,26 +200,22 @@ function Start()
 function keyDown(event)
 {       
     // check to see which direction we should move in!
-    switch(event.key)
+    switch(event.which)
     {
-        case 'w':
-        case 'W':
-        case 'ArrowUp': // Up arrow
+        case 119: // w
+        case 38: // Up arrow
             MoveUp();
             break;
-        case 's':
-        case 'S':
-        case 'ArrowDown': // Down arrow
+        case 115: // s
+        case 40: // Down arrow
             MoveDown();
             break;
-        case 'a':
-        case 'A':
-        case 'ArrowLeft': // Left arrow
+        case 97: // a
+        case 37: // Left arrow
             MoveLeft();
             break;
-        case 'd':
-        case 'D':
-        case 'ArrowRight': // Right arrow
+        case 100: // d
+        case 39: // Right arrow
             MoveRight();
             break;
     };

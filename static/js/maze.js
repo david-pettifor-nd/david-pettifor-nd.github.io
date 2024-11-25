@@ -228,6 +228,8 @@ function LoadBody()
     HTML += HTML_LINKS;
     
     document.getElementById('input_area').innerHTML = HTML;
+
+    document.onkeydown = keyDown;
 }
 
 // This function is called every time a key is pressed in the "Height"
@@ -518,7 +520,7 @@ function PlayPuzzle()
     //new_window.document.getElementsByTagName("head")[0].innerHTML = '<script language="JavaScript" type="text/javascript" src="solver.js"></script>';
     
     // create a general "DIV" which will capture keystrokes
-    new_window.document.write('\n<body onKeyPress="keyDown(event);"><h2 align="center">Maze Puzzle</h2><br>');
+    new_window.document.write('\n<body><h2 align="center">Maze Puzzle</h2><br>');
     
     // write maze information
     new_window.document.write(Maze_HTML);
