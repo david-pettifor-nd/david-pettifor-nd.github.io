@@ -215,20 +215,24 @@ function keyDown(event)
     // check to see which direction we should move in!
     switch(keycode)
     {
-        case 38:
         case 'w':
+        case 'W':
+        case '38': // Up arrow
             MoveUp();
             break;
-        case 40:
         case 's':
+        case 'S':
+        case '40': // Down arrow
             MoveDown();
             break;
-        case 37:
         case 'a':
+        case 'A':
+        case '37': // Left arrow
             MoveLeft();
             break;
-        case 39:
         case 'd':
+        case 'D':
+        case '39': // Right arrow
             MoveRight();
             break;
     };
