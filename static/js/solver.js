@@ -215,15 +215,19 @@ function keyDown(event)
     // check to see which direction we should move in!
     switch(keycode)
     {
+        case 38:
         case 'w':
             MoveUp();
             break;
+        case 40:
         case 's':
             MoveDown();
             break;
+        case 37:
         case 'a':
             MoveLeft();
             break;
+        case 39:
         case 'd':
             MoveRight();
             break;
