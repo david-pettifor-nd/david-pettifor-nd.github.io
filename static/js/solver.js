@@ -197,23 +197,9 @@ function Start()
 //  a:  Move left
 //  d:  Move right
 function keyDown(event)
-{   
-    // variable to hold the key pressed
-    var keycode;
-    
-    // if we're in Internet Explorer
-    if(window.event)
-        keycode = event.keyCode;
-
-    // other browsers (Netscape/Firefox/Opera/Chrome)
-    else if(event.which) 
-        keycode = event.which;
-
-    // convert to string character
-    keycode = String.fromCharCode(keycode);
-    
+{       
     // check to see which direction we should move in!
-    switch(keycode)
+    switch(event.key)
     {
         case 'w':
         case 'W':
